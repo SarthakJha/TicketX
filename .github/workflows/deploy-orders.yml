@@ -1,0 +1,28 @@
+name: deploy-orders
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "orders/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd orders && docker build -t sarthakjha/orders .
+      # logging into docker and pushing image
+      - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        env:
+          DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      - run: docker push sarthakjha/orders
+      # installing doctl to update the cluster
+      - uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{secrets.DO_ACCESS_TOKEN}}
+      # giving cluster connection context to rollout update
+      - run: doctl kubernetes cluster kubeconfig save k8s-ticketing
+        # rolling out new orders deploymemt
+      - run: kubectl rollout restart deployment orders-depl
