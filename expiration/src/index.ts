@@ -8,7 +8,7 @@ const start = async () => {
   //* this step is necessary else ts shows error when using jwt in anyother file
   //(implementing this will still show an error) we will force-unwrap
   // process.env.JWT_KEY
-
+  console.log('expiration started...');
   if (!process.env.NATS_CLUSTER_ID) {
     throw new Error('NATS_CLUSTER_ID env variable missing');
   }

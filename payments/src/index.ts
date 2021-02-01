@@ -12,6 +12,8 @@ const start = async () => {
   //* this step is necessary else ts shows error when using jwt in anyother file
   //(implementing this will still show an error) we will force-unwrap
   // process.env.JWT_KEY
+  console.log('orders started.....');
+
   if (!process.env.JWT_KEY) {
     throw new Error('jwtkey missing');
   }
