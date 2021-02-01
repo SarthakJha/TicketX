@@ -1,0 +1,24 @@
+name: deploy-manifests
+on: 
+  push:
+    branches: 
+      - master
+    paths:
+      - 'infra/**'
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # installing doctl to update the cluster
+      - uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{secrets.DO_ACCESS_TOKEN}}
+      # giving cluster connection context to rollout update
+      - run: doctl kubernetes cluster kubeconfig save k8s-ticketing
+      # applying files
+      - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
+        
+    
+   
