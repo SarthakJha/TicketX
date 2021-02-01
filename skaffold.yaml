@@ -4,6 +4,8 @@ deploy:
   kubectl:
     manifests:
       - ./infra/k8s/*
+      # ingress for dev env lies there
+      - ./infra/k8s-dev/*
 build:
   # local:
   # push: false
@@ -14,7 +16,7 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
     - image: sarthakjha/client
       context: client
@@ -22,7 +24,7 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: '**/*.js'
+          - src: "**/*.js"
             dest: .
     - image: sarthakjha/tickets
       context: tickets
@@ -30,7 +32,7 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
     - image: sarthakjha/orders
       context: orders
@@ -38,7 +40,7 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
     - image: sarthakjha/expiration
       context: expiration
@@ -46,7 +48,7 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
     - image: sarthakjha/payments
       context: payments
@@ -54,5 +56,5 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: 'src/**/*.ts'
+          - src: "src/**/*.ts"
             dest: .
