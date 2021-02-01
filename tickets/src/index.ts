@@ -13,7 +13,6 @@ const start = async () => {
   //(implementing this will still show an error) we will force-unwrap
   // process.env.JWT_KEY
 
-  console.log('tickets started');
   if (!process.env.JWT_KEY) {
     throw new Error('jwtkey missing');
   }
