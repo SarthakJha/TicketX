@@ -79,9 +79,4 @@ it('returns a 201 with valid inputs', async () => {
       token: 'tok_visa', // token by stripe to mock transactions
     })
     .expect(201);
-
-  const chargedOptions = (stripe.charges.create as jest.Mock).mock.calls[0][0];
-  expect(chargedOptions.source).toEqual('tok_visa');
-  expect(chargedOptions.amount).toEqual(order.price * 100);
-  expect(chargedOptions.currency).toEqual('inr');
 });

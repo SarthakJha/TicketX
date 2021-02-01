@@ -41,6 +41,9 @@ router.post(
       amount: order.price * 100, // *100 bcos stripe amount works in smallest currency unit i.e paisa/cents
       source: token,
     });
+    if (!charge) {
+      throw new Error('something went wrong creating charge');
+    }
 
     const payment = Payment.build({
       orderId,
