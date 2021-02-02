@@ -9,7 +9,7 @@ spec:
   rules:
     # CHANGE ticketing.dev AFTER PURCHASING ACTUAL DOMAIN
     # ticketing.dev will only work locally (dev environment)
-    # host should be a dns name (NOT IP addr)
+    # host should be a dns name (NOT IP address)
     - host: foo.bar
       http:
         paths:
