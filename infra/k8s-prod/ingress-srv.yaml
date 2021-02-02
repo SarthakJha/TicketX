@@ -9,7 +9,8 @@ spec:
   rules:
     # CHANGE ticketing.dev AFTER PURCHASING ACTUAL DOMAIN
     # ticketing.dev will only work locally (dev environment)
-    - host: 68.183.246.73
+    # host should be a dns name (NOT IP addr)
+    - host: foo.bar
       http:
         paths:
           - path: /api/payments/?(.*)
