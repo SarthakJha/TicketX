@@ -18,11 +18,11 @@ jobs:
           DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       - run: docker push sarthakjha/payments
-      # installing doctl to update the cluster
-      - uses: digitalocean/action-doctl@v2
-        with:
-          token: ${{secrets.DO_ACCESS_TOKEN}}
-      # giving cluster connection context to rollout update
-      - run: doctl kubernetes cluster kubeconfig save k8s-ticketing
-        # rolling out new payments deploymemt
-      - run: kubectl rollout restart deployment payments-depl
+      # # installing doctl to update the cluster
+      # - uses: digitalocean/action-doctl@v2
+      #   with:
+      #     token: ${{secrets.DO_ACCESS_TOKEN}}
+      # # giving cluster connection context to rollout update
+      # - run: doctl kubernetes cluster kubeconfig save k8s-ticketing
+      #   # rolling out new payments deploymemt
+      # - run: kubectl rollout restart deployment payments-depl
