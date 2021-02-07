@@ -1,4 +1,5 @@
 # Microservice e-commerce app
+![build](https://github.com/actions/hello-world/workflows/.github/workflows/deploy-auth.yml/badge.svg)
 An e-commerce application for buying and selling of tickets written in **Nodejs** (typescript) and **express** and using **Kubernetes** and **Docker** for deployments and using **NATS Streaming** for inter-service communication and **Github Actions** for automated integration and deployments. 
 
 ## Services:
