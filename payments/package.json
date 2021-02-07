@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ticketingsarthak/common": "^1.0.18",
+    "@ticketingsarthak/common": "^1.0.22",
     "@types/bcrypt": "^3.0.0",
     "@types/cookie-session": "2.0.39",
     "@types/cors": "^2.8.6",
@@ -34,9 +34,9 @@
     "express-async-errors": "^3.1.1",
     "express-validator": "^6.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.24",
+    "mongoose": "^5.11.15",
     "mongoose-update-if-current": "^1.4.0",
-    "stripe": "^8.132.0",
+    "stripe": "^8.134.0",
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.51",
     "typescript": "^3.9.6"
