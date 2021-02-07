@@ -1,5 +1,13 @@
 # Microservice e-commerce app
-![build](https://github.com/SarthakJha/TicketX/workflows/deploy-auth/badge.svg)
+![auth build](https://github.com/SarthakJha/TicketX/workflows/deploy-auth/badge.svg)
+![client build](https://github.com/SarthakJha/TicketX/workflows/deploy-client/badge.svg)
+![expiration build](https://github.com/SarthakJha/TicketX/workflows/deploy-expiration/badge.svg)
+![payments build](https://github.com/SarthakJha/TicketX/workflows/deploy-payments/badge.svg)
+![tickets build](https://github.com/SarthakJha/TicketX/workflows/deploy-tickets/badge.svg)
+![orders build](https://github.com/SarthakJha/TicketX/workflows/deploy-orders/badge.svg)
+
+
+
 An e-commerce application for buying and selling of tickets written in **Nodejs** (typescript) and **express** and using **Kubernetes** and **Docker** for deployments and using **NATS Streaming** for inter-service communication and **Github Actions** for automated integration and deployments. 
 
 ## Services:
