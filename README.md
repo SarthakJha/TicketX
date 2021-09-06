@@ -6,7 +6,8 @@
 ![tickets build](https://github.com/SarthakJha/TicketX/workflows/deploy-tickets/badge.svg)
 ![orders build](https://github.com/SarthakJha/TicketX/workflows/deploy-orders/badge.svg)
 
-
+## Architecture
+![Architecture](https://firebasestorage.googleapis.com/v0/b/mttn-475ad.appspot.com/o/ticketx.png?alt=media&token=1a78c01e-dd1f-4296-86b3-571bcd948569)
 
 An e-commerce application for buying and selling of tickets written in **Nodejs** (typescript) and **express** and using **Kubernetes** and **Docker** for deployments and using **NATS Streaming** for inter-service communication and **Github Actions** for automated integration and deployments. 
 
